@@ -1,0 +1,85 @@
+
+    <div class="content" style="background-color: black;">
+    <div class="head" style="text-align: center;margin-bottom: 20px;padding-top: 20px;color: white;">
+      <h3 style="color: white"> Tv Shows 📽</h3>
+    </div>
+ 
+    <!-- <main class="page-content"style="padding-bottom:30px">
+
+      <div class="container" >
+
+        <div class="row">
+          <div class="formy-group col-md-12"> -->
+           <div class="container" >
+            <div class="row" >
+              <div class="col-sm-3" *ngFor =" let mydata of data.slice(0,8) let i = index">
+              <figure class="snip0015" >
+              
+                  <!-- <img src={{img.original}} alt="sample38"/> -->
+                  <img [src]="mydata.image.original" alt="sample39" style="width: 230px;max-height:390px;" >
+              
+                <figcaption>
+              <!-- <h5 style="color: aqua;font-size:15px">{{mydata.genres}}</h5> -->
+              
+              
+              
+                  <p style="padding-top:90px;color: white;font-weight: bolder;"> <small>{{mydata.genres}}.</small>
+                  </p>
+                  <p style="padding-top:10px;color: white;font-weight: bolder;"> {{mydata.rating.average}} ⭐⭐⭐
+                  </p>
+                  <a href="" data-toggle="modal" data-target="#exampleModal " [attr.data-target]="'#'+mydata.name" >👁 </a>
+                    <!-- Modal -->
+              <div class="modal fade " id="{{mydata.name}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Tv Info</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:red">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+               <div class="row">
+                 <div class="col-sm-3">
+                     <img [src]="mydata.image.original" alt="sample39" style="width: 120px;height:190px;"  />
+                </div>
+                <div class="col-sm-9">
+              <h2>{{mydata.name}} </h2>
+              <ul><li>Genre 🎬: {{mydata.genres}}</li>
+                <li>Premiered 📅: {{mydata.premiered}}</li>
+                <li>Ratings ⭐⭐: {{mydata.rating.average}}</li>
+              </ul>
+              <div style="font-size: 13px;"  [innerHTML]="mydata.summary"></div>
+                </div>
+                
+               </div>
+                    </div>
+                    <div class="modal-footer">
+                   
+                    </div>
+                  </div>
+                </div>
+              </div>
+                </figcaption>
+              
+              </figure>
+              </div>
+                        <!-- </div>
+              
+              
+                      </div>-->
+              
+              
+                    </div> 
+           </div>
+
+      <!-- hero area start -->
+      <div class="empty" style="padding-bottom:70px;padding-top:20px">
+     <div class="wrapper">
+      <button>
+        <span>View all</span>
+        <div class="liquid"></div>
+      </button>
+     </div>
+</div>
+    </div>
